@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="320" src="src/assets/logo.png">
+  <img width="150" src="src/assets/1.jpg">
 </p>
 
 # vue_program
