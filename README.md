@@ -1,5 +1,6 @@
 <p align="center">
   <img width="150" src="src/assets/1.jpg">
+  <span>我的宠物宝宝__小八</span>
 </p>
 
 # vue_program
