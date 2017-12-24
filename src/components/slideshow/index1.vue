@@ -85,7 +85,7 @@ export default {
     }
   },
   mounted () {
-    console.log(this.slides)
+    // console.log(this.slides)
     this.runInv()
   }
 }

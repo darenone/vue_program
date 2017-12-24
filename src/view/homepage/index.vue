@@ -13,6 +13,7 @@
           </ul>
           <div class="hr" v-if="!item.last"></div>
         </template>
+        <p style="color: #563333;width: 90%;background-color: #c5b7b7;margin:0 auto;">本页面所有红色部分是循环的时候在里面添加标识符，通过标识符来动态添加类名或则显示隐藏元素</p>
       </div>
       <div class="index-left-block lastest-news">
         <h2>最新消息</h2>
@@ -145,7 +146,7 @@ export default {
         },
         {
           title: '品牌营销',
-          description: '品牌营销帮助你的产品更好地找到定位',
+          description: '动态添加.line-last去除margin-right',
           id: 'earth',
           toKey: 'count',
           saleout: false
@@ -159,7 +160,7 @@ export default {
         },
         {
           title: '勇攀高峰',
-          description: '帮你勇闯高峰，到达事业的顶峰',
+          description: '动态添加.line-last去除margin-right',
           id: 'hill',
           toKey: 'publish',
           saleout: false
@@ -192,6 +193,7 @@ export default {
 }
 .index-left-block .hr {
   margin-bottom: 20px;
+  background: red;
 }
 .index-left-block h2 {
   background: #4fc08d;
@@ -246,6 +248,7 @@ export default {
 }
 .line-last {
   margin-right: 0;
+  color:red;
 }
 .index-board-button {
   margin-top: 20px;

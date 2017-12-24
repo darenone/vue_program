@@ -7,7 +7,14 @@ const baseWebpackConfig = require('./webpack.base.conf')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
-
+//配置访问本地数据
+const express = require('express')
+const app = express()
+var appData = require('../data.json') //加载本地数据文件
+var newsList = appData.newsList
+var login = appData.login
+var apiRoutes = express.Router()
+app.use('/api', apiRoutes)
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
@@ -35,6 +42,20 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
+    },
+    before(app) {
+      app.get('/api/login', (req, res) => {
+        res.json({
+          errno: 0,
+          data: login
+        })
+      }),
+      app.get('/api/newsList', (req, res) => {
+        res.json({
+          errno: 0,
+          data: newsList
+        })
+      })
     }
   },
   plugins: [
