@@ -22,6 +22,9 @@
             <a :href="item.url" class="new-item">{{ item.name }}</a>
           </li>
         </ul>
+        <p style="margin:0 auto;background-color: #b2b2b2;">此部分是利用vue-resource
+        插件模拟请求API获得的数据更多具体用法清参见我写的<a href="https://segmentfault.com/a/1190000012560157?_ea=3056314"
+        target="_blank" style="color: blue;text-decoration: underline;">这篇文章</a></p>
       </div>
     </div>
     <div class="index-right">

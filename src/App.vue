@@ -2,7 +2,9 @@
   <div id="app">
     <div class="app-head">
       <div class="app-head-inner">
-          <img src="./assets/1.jpg">
+          <router-link :to="{path: '/'}">
+            <img src="./assets/1.jpg">
+          </router-link>
           <div class="head-nav">
             <ul class="nav-list">
               <li>登陆</li>
@@ -134,9 +136,10 @@ body {
   height: 80px;
   width: 100%;
   line-height: 80px;
-  background: #e3e4e8;
+  background: #0c0c0f;
   clear: both;
   margin-top: 30px;
+  color:white;
 }
 .container {
   width: 1200px;
