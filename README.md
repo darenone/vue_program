@@ -1,10 +1,16 @@
 <p align="center">
-  <img width="150" src="src/assets/1.jpg">
+  <img width="150" src="src/assets/logo.png">
 </p>
 
 # vue_program
 
-> A Vue.js project
+> 此项目是练手项目，并且打算长期维护，既然入坑了vue,并且公司最近在用此框架开发项目，所以打算把碰到的坑遇到的问题都整合到这个练手项目里，方便自己学习，也拿出来分享给你大家，希望对同学们有所帮助，如有问题还请批评指正，自己也是一枚前端入门人员，希望各位能指点一二，在此谢过
+
+## 相关文章
+在维护此小项目的时候，我相应的写了几篇文章，方便自己去理解有关技术，如果你有需要可以前往阅读`欢迎提出错误,共同进步`
+> * [vue项目实战(第一回)](https://segmentfault.com/a/1190000012560157)
+> * [vue项目实战(第二回)](https://segmentfault.com/a/1190000012568505)
+
 
 ## 开发流程
 
@@ -12,10 +18,10 @@
 # 安装依赖
 npm install
 
-# serve with hot reload at localhost:8080
+# 启动项目
 npm run dev
 
-# build for production with minification
+# 打包项目
 npm run build
 
 # build for production and view the bundle analyzer report
@@ -31,7 +37,7 @@ npm run e2e
 npm test
 ```
 
-## 目录结构
+<!-- ## 目录结构
 ```shell
 ├── build                      // 构建相关  
 ├── config                     // 配置相关
@@ -63,7 +69,16 @@ npm test
 ├── index.html                 // html模板
 └── package.json               // package.json
 
-```
+``` -->
 
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+------
+
+作者联系方式：
+* 邮件(zongq@unitoon.cn)
+* 微信: zq1291342008
+* weibo: [喔喔牛在路上](https://weibo.com/3279187131/profile?topnav=1&wvr=6&is_all=1)
+* 知乎: [宗强](https://www.zhihu.com/people/zongqinag/activities)
+2017 年 12月 26日
+
+2017年就要过去了，这一年工作上涨了些工资，感情上失恋，其它没有多大变化，2018年就要来了，祝各位新年快乐！
