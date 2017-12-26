@@ -8,6 +8,8 @@
             {{ item.name }}
           </router-link>
         </ul>
+        <p style="margin:0 auto;background-color: #b2b2b2;">关于此部分的实现请看<a href="https://segmentfault.com/a/1190000012568505"
+        target="_blank" style="color: blue;text-decoration: underline;">这篇文章</a></p>
       </div>
     </div>
     <div class="detail-right">
@@ -24,23 +26,23 @@ export default {
     return {
       products: [
         {
-          name: '数据统计',
+          name: '品牌营销',
           path: 'count',
           icon: require('../../assets/images/1.png'),
           active: false
         },
         {
-          name: '数据预测',
+          name: '使命必达',
           path: 'forecast',
           active: false
         },
         {
-          name: '流量分析',
+          name: '开放产品',
           path: 'analysis',
           active: false
         },
         {
-          name: '广告发布',
+          name: '永攀高峰',
           path: 'publish',
           active: false
         }

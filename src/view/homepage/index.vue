@@ -38,7 +38,7 @@
             <h2>{{ item.title }}</h2>
             <p>{{ item.description }}</p>
             <div class="index-board-button">
-              <router-link class="button" :to="{path: 'detail/' + item.toKey}">立即购买</router-link>
+              <router-link class="button" :to="{path: 'detail/' + item.toKey}">{{ item.urlName }}</router-link>
             </div>
           </div>
         </div>
@@ -145,6 +145,7 @@ export default {
           description: '开放产品是一款开放产品',
           id: 'car',
           toKey: 'analysis',
+          urlName: '开放产品',
           saleout: false
         },
         {
@@ -152,6 +153,7 @@ export default {
           description: '动态添加.line-last去除margin-right',
           id: 'earth',
           toKey: 'count',
+          urlName: '品牌营销',
           saleout: false
         },
         {
@@ -159,6 +161,7 @@ export default {
           description: '使命必达快速迭代永远保持最前端的速度',
           id: 'loud',
           toKey: 'forecast',
+          urlName: '使命必达',
           saleout: true
         },
         {
@@ -166,6 +169,7 @@ export default {
           description: '动态添加.line-last去除margin-right',
           id: 'hill',
           toKey: 'publish',
+          urlName: '勇攀高峰',
           saleout: false
         }
       ]
