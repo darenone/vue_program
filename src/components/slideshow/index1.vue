@@ -1,13 +1,5 @@
 <template>
   <div class="slide-show" @mouseover="clearInv" @mouseout="runInv">
-    <!-- jianjie -->
-    <div class="slide-title">
-      <p style="padding-top:30px;">
-        <B>自定义组件__幻灯片</B><br/>
-        可一个给幻灯片传递 slides inv两个值
-        并且当幻灯片切换的时候出发父组件上的事件
-      </p>
-    </div>
     <!-- 图片 -->
     <div class="slide-img">
       <a :href="slides[nowIndex].href">
@@ -20,7 +12,7 @@
       </a>
     </div>
     <!-- 标题 -->
-    <h2>{{ slides[nowIndex].title }}</h2>
+    <h2><span>{{ slides[nowIndex].title }}</span></h2>
     <!-- 页码 -->
     <ul class="slide-pages">
       <li @click="goto(prevIndex)">&lt;</li>
@@ -131,12 +123,16 @@ export default {
   height: 30px;
   text-align: left;
   padding-left: 15px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 .slide-img {
   width: 100%;
 }
 .slide-img img {
   width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
 }

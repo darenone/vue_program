@@ -5,15 +5,15 @@
         <h2>全部产品</h2>
         <template v-for="item in productList">
           <h3>{{ item.title }}</h3>
-          <ul>
-            <li v-for="item in item.list">
-              <a :href="item.url">{{ item.name }}</a>
-              <span v-if="item.hot" class="hot-tag">HOT</span>
-            </li>
-          </ul>
+              <p v-if="item.list.length == 0">暂未数据...</p>
+              <ul v-else>
+                <li v-for="item in item.list">
+                  <a :href="item.url" target="_blank">{{ item.name }}</a>
+                  <span v-if="item.hot" class="hot-tag">HOT</span>
+                </li>
+              </ul>
           <div class="hr" v-if="!item.last"></div>
         </template>
-        <p style="color: #563333;width: 90%;background-color: #c5b7b7;margin:0 auto;">本页面所有红色部分是循环的时候在里面添加标识符，通过标识符来动态添加类名或则显示隐藏元素</p>
       </div>
       <div class="index-left-block lastest-news">
         <h2>最新消息</h2>
@@ -22,9 +22,6 @@
             <a :href="item.url" class="new-item">{{ item.name }}</a>
           </li>
         </ul>
-        <p style="margin:0 auto;background-color: #b2b2b2;">此部分是利用vue-resource
-        插件模拟请求API获得的数据更多具体用法清参见我写的<a href="https://segmentfault.com/a/1190000012560157?_ea=3056314"
-        target="_blank" style="color: blue;text-decoration: underline;">这篇文章</a></p>
       </div>
     </div>
     <div class="index-right">
@@ -49,6 +46,10 @@
 
 <script>
 import slideShow from './../../components/slideshow/index1.vue'
+import parrot1 from './../../assets/parrot_1.png'
+import parrot2 from './../../assets/parrot_2.png'
+import parrot3 from './../../assets/parrot_3.png'
+import parrot4 from './../../assets/parrot_4.png'
 export default {
   components: {
     slideShow
@@ -71,71 +72,54 @@ export default {
       invTime: 5000,
       slides: [
         {
-          src: require('./../../assets/1.jpg'),
+          src: parrot1,
           title: '第一页',
           href: 'detail/analysis'
         },
         {
-          src: require('./../../assets/2.jpg'),
+          src: parrot2,
           title: '第二页',
           href: 'detail/count'
         },
         {
-          src: require('./../../assets/3.jpg'),
+          src: parrot3,
           title: '第三页',
           href: 'detail/publish'
         },
         {
-          src: require('./../../assets/4.jpg'),
+          src: parrot4,
           title: '第四页',
           href: 'detail/forecast'
         }
       ],
       productList: {
         pc: {
-          title: 'PC产品',
+          title: '赶集网',
           list: [
             {
-              name: '数据统计',
-              url: 'http://starcraft.com'
-            },
-            {
-              name: '数据预测',
-              url: 'http://warcraft.com'
-            },
-            {
-              name: '流量分析',
-              url: 'http://overwatch.com',
+              name: '转让自家繁殖的蓝合上 绿合上 乖巧亲人  ',
+              url: 'http://sh.ganji.com/niao/2928837883x.htm',
               hot: true
             },
             {
-              name: '广告发布',
-              url: 'http://hearstone.com'
+              name: '转让自家繁殖的吸密幼鸟 乖巧亲人',
+              url: 'http://sh.ganji.com/niao/2928837478x.htm'
+            },
+            {
+              name: '转让自家繁殖的大体金泰阳幼鸟 可爱亲人',
+              url: 'http://sh.ganji.com/niao/2920687032x.htm',
+              hot: true
+            },
+            {
+              name: '转让人工繁殖的大体钢果灰积 手养亲人',
+              url: 'http://sh.ganji.com/niao/3009281816x.htm'
             }
           ]
         },
         app: {
-          title: '手机应用类',
+          title: '58同城',
           last: true,
-          list: [
-            {
-              name: '91助手',
-              url: 'http://weixin.com'
-            },
-            {
-              name: '产品助手',
-              url: 'http://twitter.com',
-              hot: true
-            },
-            {
-              name: '智能地图',
-              url: 'http://maps.com'
-            },
-            {
-              name: '团队语音',
-              url: 'http://phone.com'
-            }
-          ]
+          list: []
         }
       },
       newsList: [],
@@ -200,7 +184,7 @@ export default {
 }
 .index-left-block .hr {
   margin-bottom: 20px;
-  background: red;
+  background: #403535;
 }
 .index-left-block h2 {
   background: #4fc08d;
@@ -213,11 +197,19 @@ export default {
   font-weight: bold;
   color: #222;
 }
+.index-left-block p {
+  padding: 10px 15px;
+  color: red;
+}
 .index-left-block ul {
   padding: 10px 15px;
 }
 .index-left-block li {
   padding: 5px;
+  line-height: 20px;
+}
+.index-left-block li a{
+  color: blue;
 }
 .index-board-list {
   overflow: hidden;
@@ -261,7 +253,7 @@ export default {
   margin-top: 20px;
 }
 .lastest-news {
-  min-height: 512px;
+  min-height: 505px;
 }
 .hot-tag {
   background: red;

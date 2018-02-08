@@ -8,8 +8,6 @@
             {{ item.name }}
           </router-link>
         </ul>
-        <p style="margin:0 auto;background-color: #b2b2b2;">关于此部分的实现请看<a href="https://segmentfault.com/a/1190000012568505"
-        target="_blank" style="color: blue;text-decoration: underline;">这篇文章</a></p>
       </div>
     </div>
     <div class="detail-right">

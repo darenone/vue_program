@@ -3,15 +3,15 @@
     <div class="app-head">
       <div class="app-head-inner">
           <router-link :to="{path: '/'}">
-            <img src="./assets/1.jpg">
+            <img src="./assets/logo.gif">
           </router-link>
           <div class="head-nav">
             <ul class="nav-list">
-              <li>登陆</li>
+              <li @click="login">登陆</li>
               <li class="nav-pile">|</li>
-              <li>注册</li>
+              <li @click="register">注册</li>
               <li class="nav-pile">|</li>
-              <li>关于</li>
+              <li @click="about">关于</li>
             </ul>
           </div>
         </div>
@@ -23,15 +23,38 @@
     </div>
     <div class="app-footer">
       <div class="app-foot">
-        <p>@2017 宗强 编写</p>
+        <p>2018年</p>
       </div>
+      
     </div>
-  </div>
+    <my-dialog v-if="switch_show"></my-dialog> 
+  </div>  
 </template>
 
 <script>
+import myDialog from './components/dialog/index.vue'
 export default {
-  name: 'app'
+  components: {
+    myDialog
+  },
+  name: 'app',
+  data () {
+    return {
+      switch_show: false
+    }
+  },
+  methods: {
+    login () {
+      this.switch_show = !this.switch_show
+      console.log(this.switch_show)
+    },
+    register () {
+      this.switch_show = !this.switch_show
+    },
+    about () {
+      this.switch_show = !this.switch_show
+    }
+  }
 }
 </script>
 
@@ -89,7 +112,7 @@ a {
   text-decoration: none;
 }
 body {
-  background: #f0f2f5;
+  background: #7d7d7d;
   font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
   font-size: 14px;
   color: #444;
@@ -115,7 +138,7 @@ body {
   float: left;
 }
 .app-head-inner img {
-  width: 50px;
+  width: 100px;
   margin-top: 20px;
 }
 .head-nav {
@@ -138,7 +161,6 @@ body {
   line-height: 80px;
   background: #0c0c0f;
   clear: both;
-  margin-top: 30px;
   color:white;
 }
 .container {
