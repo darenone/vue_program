@@ -3,15 +3,15 @@
     <div class="app-head">
       <div class="app-head-inner">
           <router-link :to="{path: '/'}">
-            <img src="./assets/logo.gif">
+            <img src="./assets/logo.png">
           </router-link>
           <div class="head-nav">
             <ul class="nav-list">
-              <li @click="login">登陆</li>
+              <li @click="show('showA')">登陆</li>
               <li class="nav-pile">|</li>
-              <li @click="register">注册</li>
+              <li @click="show('showB')">注册</li>
               <li class="nav-pile">|</li>
-              <li @click="about">关于</li>
+              <li @click="show('showC')">关于</li>
             </ul>
           </div>
         </div>
@@ -24,10 +24,17 @@
     <div class="app-footer">
       <div class="app-foot">
         <p>2018年</p>
-      </div>
-      
+      </div> 
     </div>
-    <my-dialog v-if="switch_show"></my-dialog> 
+    <my-dialog v-if="showA" @close="close('showA',false)" :switchShow="showA">
+      <p>登录</p>
+    </my-dialog> 
+    <my-dialog v-if="showB" @close="close('showB',false)" :switchShow="showB">
+      <p>注册</p>
+    </my-dialog> 
+    <my-dialog v-if="showC" @close="close('showC',false)" :switchShow="showC">
+      <p>利用vue做的一个实例项目,功能不断丰富中...</p>
+    </my-dialog> 
   </div>  
 </template>
 
@@ -40,19 +47,26 @@ export default {
   name: 'app',
   data () {
     return {
-      switch_show: false
+      showA: false,
+      showB: false,
+      showC: false
     }
   },
   methods: {
-    login () {
-      this.switch_show = !this.switch_show
-      console.log(this.switch_show)
+    // login () {
+    //   this.showA = !this.showA
+    // },
+    // register () {
+    //   this.showB = !this.showB
+    // },
+    // about () {
+    //   this.showC = !this.showC
+    // },
+    show (name) {
+      this[name] = !this[name]
     },
-    register () {
-      this.switch_show = !this.switch_show
-    },
-    about () {
-      this.switch_show = !this.switch_show
+    close (name, obj) {
+      this[name] = obj
     }
   }
 }

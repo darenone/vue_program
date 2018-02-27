@@ -46,10 +46,10 @@
 
 <script>
 import slideShow from './../../components/slideshow/index1.vue'
-import parrot1 from './../../assets/parrot_1.png'
-import parrot2 from './../../assets/parrot_2.png'
-import parrot3 from './../../assets/parrot_3.png'
-import parrot4 from './../../assets/parrot_4.png'
+import parrot1 from './../../assets/parrot_1.jpg'
+import parrot2 from './../../assets/parrot_2.jpg'
+import parrot3 from './../../assets/parrot_3.jpg'
+import parrot4 from './../../assets/parrot_4.jpg'
 export default {
   components: {
     slideShow
@@ -94,30 +94,30 @@ export default {
       ],
       productList: {
         pc: {
-          title: '赶集网',
+          title: '英雄资讯',
           list: [
             {
-              name: '转让自家繁殖的蓝合上 绿合上 乖巧亲人  ',
-              url: 'http://sh.ganji.com/niao/2928837883x.htm',
+              name: '蛇队化龙绝非易事 斩断荆棘未来可期  ',
+              url: 'http://lpl.qq.com/es/info-go-none.shtml?id=18352',
               hot: true
             },
             {
-              name: '转让自家繁殖的吸密幼鸟 乖巧亲人',
-              url: 'http://sh.ganji.com/niao/2928837478x.htm'
+              name: 'LDL战队TSG公布阵容',
+              url: 'http://lpl.qq.com/es/info-go-none.shtml?id=18352'
             },
             {
-              name: '转让自家繁殖的大体金泰阳幼鸟 可爱亲人',
-              url: 'http://sh.ganji.com/niao/2920687032x.htm',
+              name: '数据周刊第九期 立春-天下初定',
+              url: 'http://lpl.qq.com/es/info-go-none.shtml?id=18352',
               hot: true
             },
             {
-              name: '转让人工繁殖的大体钢果灰积 手养亲人',
-              url: 'http://sh.ganji.com/niao/3009281816x.htm'
+              name: 'LPL极限操作：EZ贴脸输出，FURY拼死收三人！',
+              url: 'http://lpl.qq.com/es/info-go-none.shtml?id=18352'
             }
           ]
         },
         app: {
-          title: '58同城',
+          title: '战队消息',
           last: true,
           list: []
         }
