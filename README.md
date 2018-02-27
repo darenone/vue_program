@@ -27,7 +27,7 @@ npm run dev
 # 打包项目
 npm run build
 
-# build for production and view the bundle analyzer report
+<!-- # build for production and view the bundle analyzer report
 npm run build --report
 
 # run unit tests
@@ -37,7 +37,7 @@ npm run unit
 npm run e2e
 
 # run all tests
-npm test
+npm test -->
 ```
 
 <!-- ## 目录结构
@@ -73,19 +73,4 @@ npm test
 └── package.json               // package.json
 
 ``` -->
-
-
 ------
-
-作者联系方式：
-* 邮件(zongq@unitoon.cn)
-* 微信: zq1291342008
-* weibo: [喔喔牛在路上](https://weibo.com/3279187131/profile?topnav=1&wvr=6&is_all=1)
-* 知乎: [宗强](https://www.zhihu.com/people/zongqinag/activities)
-
-
-**2017 年 12月 26日**
-
-
-2017年就要过去了，这一年工作上涨了些工资，感情上失恋，其它没有多大变化，2018年就要来了，祝各位新年快乐！
-
