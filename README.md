@@ -27,7 +27,7 @@ npm run dev
 # 打包项目
 npm run build
 
-<!-- # build for production and view the bundle analyzer report
+# build for production and view the bundle analyzer report
 npm run build --report
 
 # run unit tests
@@ -37,7 +37,7 @@ npm run unit
 npm run e2e
 
 # run all tests
-npm test -->
+npm test
 ```
 
 <!-- ## 目录结构
