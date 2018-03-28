@@ -1,18 +1,14 @@
-<p align="center">
-  <img width="150" src="src/assets/logo.png">
-</p>
+### 简介
 
-# vue_program
+`vue_program` 这是一个基于vue框架的练手项目,《它基于 [Vue.js](https://github.com/vuejs/vue)使用了最新的前端技术栈，内置了i18国际化解决方案，动态路由，权限验证等很多功能特性。
 
-> 此项目是练手项目，并且打算长期维护，既然入坑了vue,并且公司最近在用此框架开发项目，所以打算把碰到的坑遇到的问题都整合到这个练手项目里，方便自己学习，也拿出来分享给你大家，希望对同学们有所帮助，如有问题还请批评指正，自己也是一枚前端入门人员，希望各位能指点一二，在此谢过
-
-## 相关文章
+### 相关文章
 在维护此小项目的时候，我相应的写了几篇文章，方便自己去理解有关技术，如果你有需要可以前往阅读`欢迎提出错误,共同进步`
 > * [vue项目实战(第一回)](https://segmentfault.com/a/1190000012560157)
 > * [vue项目实战(第二回)](https://segmentfault.com/a/1190000012568505)
 
 
-## 开发流程
+### 开发流程
 
 ``` bash
 # 克隆到本地
@@ -39,38 +35,3 @@ npm run e2e
 # run all tests
 npm test
 ```
-
-<!-- ## 目录结构
-```shell
-├── build                      // 构建相关  
-├── config                     // 配置相关
-├── src                        // 源代码
-│   ├── api                    // 所有请求
-│   ├── assets                 // 主题 图片等静态资源
-│   ├── components             // 全局公用组件
-│   ├── directive              // 全局指令
-│   ├── filtres                // 全局 filter
-│   ├── icons                  // 项目svg icons
-│   ├── lang                   // 国际化 lang
-│   ├── mock                   // 项目mock 模拟数据
-│   ├── router                 // 路由
-│   ├── store                  // 全局 store
-│   ├── styles                 // 全局样式
-│   ├── utils                  // 全局公用方法
-│   ├── vendor                 // 公用vendor
-│   ├── views                  // views
-│   ├── App.vue                // 入口页面
-│   ├── main.js                // 入口js 初始化 加载组件等
-│   └── permission.js          // 权限管理
-├── static                     // 第三方不打包资源
-│   └── Tinymce                // 富文本
-├── .babelrc                   // babel-loader 配置
-├── .eslintrc.js               // eslint 配置项
-├── .postcssrc.js              // postcss 配置项
-├── .gitignore                 // git 忽略项
-├── favicon.ico                // favicon图标
-├── index.html                 // html模板
-└── package.json               // package.json
-
-``` -->
-------
